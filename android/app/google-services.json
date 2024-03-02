@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "688397970940",
+    "project_id": "campino-fdd10",
+    "storage_bucket": "campino-fdd10.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:688397970940:android:46fbc3e7be233f45cb5679",
+        "android_client_info": {
+          "package_name": "com.example.campino_pfe"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqAXA8Rh4N-Xg2YzVdNZ8nFD2N0l328Ik"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
