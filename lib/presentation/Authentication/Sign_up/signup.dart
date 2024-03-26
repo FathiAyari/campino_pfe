@@ -49,6 +49,10 @@ class _SignupScreenState extends State<SignupScreen> {
     return SafeArea(
       child: Scaffold(
           backgroundColor: Colors.white,
+          appBar: AppBar(
+              title: Text('Campino'),
+              backgroundColor: Colors.indigo
+          ),
           body: SingleChildScrollView(
               scrollDirection: Axis.vertical,
               child: Form(
@@ -57,45 +61,6 @@ class _SignupScreenState extends State<SignupScreen> {
                     children: [
                       Column(
                         children: [
-                          Container(
-                            height: 250,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.only(
-                                bottomLeft: Radius.circular(90),
-                              ),
-                              gradient: LinearGradient(begin: Alignment.topRight, end: Alignment.bottomLeft, colors: [
-                                Colors.blueGrey,
-                                Colors.indigo,
-                              ]),
-                            ),
-                            child: Center(
-                                child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Container(
-                                  margin: EdgeInsets.only(top: 50),
-                                  child: Image(
-                                    image: AssetImage('assets/images/logo.png'),
-                                    height: 90,
-                                    width: 90,
-                                  ),
-                                ),
-                                Container(
-                                  margin: EdgeInsets.only(top: 20),
-                                  child: Text(
-                                    'Créer un compte Campino',
-                                    textAlign: TextAlign.right,
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 25,
-                                        //  fontWeight: FontWeight.bold,
-                                        fontStyle: FontStyle.italic),
-                                  ),
-                                )
-                              ],
-                            )),
-                          ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Stack(

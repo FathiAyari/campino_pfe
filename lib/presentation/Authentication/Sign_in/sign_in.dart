@@ -76,51 +76,15 @@ class _LoginScreenState extends State<SignInScreen> {
       onWillPop: avoidReturnButton,
       child: Scaffold(
           backgroundColor: Colors.white,
+          appBar: AppBar(
+            title: Text('Campino'),
+            backgroundColor: Colors.indigo
+          ),
           body: SingleChildScrollView(
             scrollDirection: Axis.vertical,
             child: Form(
                 key: _formkey,
                 child: Column(children: [
-                  Container(
-                    height: 280,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(90),
-                      ),
-                      gradient: LinearGradient(begin: Alignment.topRight, end: Alignment.bottomLeft, colors: [
-                        Colors.blueGrey,
-                        Colors.indigo,
-                      ]),
-                    ),
-                    child: Center(
-                        child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Container(
-                          margin: EdgeInsets.only(top: 50),
-                          child: Image(
-                            image: AssetImage('assets/images/logo.png'),
-                            height: 100,
-                            width: 100,
-                          ),
-                        ),
-                        // SizedBox(height: 10),
-                        Container(
-                          margin: EdgeInsets.only(top: 20),
-                          child: Text(
-                            'Se Connecter ',
-                            textAlign: TextAlign.left,
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 25,
-                                //  fontWeight: FontWeight.bold,
-                                fontStyle: FontStyle.italic),
-                          ),
-                        )
-                      ],
-                    )),
-                  ),
                   Padding(
                     padding: EdgeInsets.only(top: Constants.screenHeight * 0.1),
                     child: InputField(

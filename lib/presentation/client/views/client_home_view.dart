@@ -251,17 +251,21 @@ class _BottomNavBarState extends State<HomePageClient> {
                             title: Text("Êtes-vous sure de déconnecter ?"),
                             actions: [
                               Container(
+
                                   decoration: BoxDecoration(
-                                      color: Colors.redAccent.withOpacity(0.5), borderRadius: BorderRadius.circular(20)),
+                                      color: Colors.red.withOpacity(0.5), borderRadius: BorderRadius.circular(20)),
                                   child: TextButton(
                                       onPressed: () {
                                         Navigator.pop(context);
                                       },
-                                      child: Text("Non"))),
+                                      child: Text(
+                                          "Non",
+                                          style: TextStyle(color:  Colors.white),
+                                  ))),
                               Container(
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(20),
-                                    color: Colors.blueAccent,
+                                    color: Colors.green,
                                   ),
                                   child: TextButton(
                                       onPressed: () {
@@ -289,3 +293,4 @@ class _BottomNavBarState extends State<HomePageClient> {
     );
   }
 }
+

@@ -78,20 +78,23 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                     );
                   }),
                 ),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: Constants.screenWidth * 0.07, vertical: 10),
+                Center(
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Container(
-                        decoration: BoxDecoration(color: Colors.red.withOpacity(0.5), borderRadius: BorderRadius.circular(12)),
-                        child: Padding(
-                          padding: const EdgeInsets.all(15),
-                          child: InkWell(
-                            onTap: () {
-                              onBoardingController.check();
-                              Get.to(SignInScreen());
-                            },
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 30, 0, 30), // Adjust the padding as needed
+                        child: ElevatedButton(
+                          onPressed: () {
+                            onBoardingController.check();
+                            Get.to(SignInScreen());
+                          },
+                          style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                            backgroundColor: Colors.red.withOpacity(0.5).withOpacity(0.5), // Adjust the opacity as needed
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
                             child: Text(
                               "Ignorer",
                               style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
@@ -100,33 +103,34 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Container(
-                          height: 45,
-                          child: ElevatedButton(
-                              onPressed: (currentPage == contentList.length - 1)
-                                  ? () {
-                                      Get.to(SignInScreen());
-                                    }
-                                  : () {
-                                      onBoardingController.check();
-                                      _controller.nextPage(duration: Duration(milliseconds: 400), curve: Curves.easeInOutQuint);
-                                    },
-                              style: ElevatedButton.styleFrom(
-                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-                                backgroundColor: Colors.blueAccent,
-                              ),
-                              child: (currentPage == contentList.length - 1)
-                                  ? Text("Commencer")
-                                  : Text(
-                                      'Suivant',
-                                      style: TextStyle(color: Colors.white),
-                                    )),
+                        padding: const EdgeInsets.fromLTRB(0, 30, 0, 30), // Adjust the padding as needed
+                        child: ElevatedButton(
+                          onPressed: (currentPage == contentList.length - 1)
+                              ? () {
+                            Get.to(SignInScreen());
+                          }
+                              : () {
+                            onBoardingController.check();
+                            _controller.nextPage(duration: Duration(milliseconds: 400), curve: Curves.easeInOutQuint);
+                          },
+                          style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                            backgroundColor: Colors.blueAccent,
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: (currentPage == contentList.length - 1)
+                                ? Text("Commencer")
+                                : Text(
+                              'Suivant',
+                              style: TextStyle(color: Colors.white),
+                            ),
+                          ),
                         ),
                       ),
                     ],
                   ),
-                )
+                ),
               ],
             )
           ],
