@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "654151528622",
+    "project_id": "campino-40bba",
+    "storage_bucket": "campino-40bba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:654151528622:android:d01d0097f9494fdd99fd3f",
+        "android_client_info": {
+          "package_name": "com.example.campino"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "654151528622-fo38kj84s15340qu0ai59pga6137fvi9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXHzfFrdKWC7cBv06krLKUcOPz8kse9f4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "654151528622-fo38kj84s15340qu0ai59pga6137fvi9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
