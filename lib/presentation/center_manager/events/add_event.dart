@@ -32,7 +32,7 @@ class _AddEvenetState extends State<AddEvenet> {
         elevation: 0,
         centerTitle: true,
         title: Text(
-          'Ajouter evenement',
+          'Ajouter evenement ',
           style: TextStyle(
             color: Colors.indigo, //change your color here
           ),
