@@ -191,16 +191,6 @@ class _BottomNavBarState extends State<HomePageClient> {
                 ),
                 ListTile(
                   title: const Text(
-                    'à propos de nous',
-                    style: TextStyle(color: Colors.blueAccent),
-                  ),
-                  trailing: Icon(Icons.question_mark_outlined, color: Colors.blueAccent),
-                  onTap: () {
-                    Navigator.pop(context);
-                  },
-                ),
-                ListTile(
-                  title: const Text(
                     'Service Client',
                     style: TextStyle(color: Colors.blueAccent),
                   ),

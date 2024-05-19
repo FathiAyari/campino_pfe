@@ -1,4 +1,5 @@
 import 'package:campino/models/centerModel.dart';
+import 'package:campino/presentation/center_manager/centers/add_center_images.dart';
 import 'package:campino/presentation/center_manager/centers/center_reservations.dart';
 import 'package:campino/presentation/ressources/dimensions/constants.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -57,6 +58,15 @@ class _CenterDetailsManagerState extends State<CenterDetailsManager> {
                               },
                               child: Text("Les reservations"))),
                     ),
+                    Container(
+                        width: double.infinity,
+                        child: ElevatedButton(
+                            onPressed: () {
+                              Get.to(AddCenterImages(
+                                centerId: widget.center.id!,
+                              ));
+                            },
+                            child: Text("Les Images"))),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
